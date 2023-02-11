@@ -1,6 +1,6 @@
 # Dockerize-laravel
 
-#### Create user and add to sudo group
+### Create user and add to sudo group
 
 `sudo su`
 `adduser olusola`
@@ -8,7 +8,10 @@
 `su olusola`
 
 
-#### Installing Docker
+
+
+
+### Installing Docker
 
 `sudo apt update`
 
@@ -27,10 +30,17 @@ Ensure docker is install from docker repo insted of default ubuntu
 install Docker
 `sudo apt install docker-ce -y`
 
-#### Executing the Docker Command Without Sudo
+
+
+
+### Executing the Docker Command Without Sudo
 
 add username to Docker group
 `sudo usermod -aG docker ${USER}`
 
 apply gorup memebership
 `su - ${USER}`
+
+
+
+### installing docker compose
