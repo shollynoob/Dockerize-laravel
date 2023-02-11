@@ -7,11 +7,8 @@
 `usermod -aG sudo olusola`
 `su olusola`
 <br/>
-
-
-
-
-
+<br/>
+<br/>
 
 ### Installing Docker
 
@@ -32,11 +29,8 @@ Ensure docker is install from docker repo insted of default ubuntu<br/>
 install Docker<br/>
 `sudo apt install docker-ce -y`
 <br/>
-
-
-
-
-
+<br/>
+<br/>
 
 ### Executing the Docker Command Without Sudo<br/>
 
@@ -46,11 +40,11 @@ add username to Docker group<br/>
 apply gorup memebership<br/>
 `su - ${USER}`
 <br/>
-
-
-
-
-
+<br/>
+<br/>
 
 ### installing docker compose<br/>
 `sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose`
+
+set permission for docker compose
+`sudo chmod +x /usr/local/bin/docker-compose`
