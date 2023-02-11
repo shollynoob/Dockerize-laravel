@@ -6,6 +6,8 @@
 `adduser olusola`
 `usermod -aG sudo olusola`
 `su olusola`
+<br/>
+
 
 
 
@@ -29,6 +31,9 @@ Ensure docker is install from docker repo insted of default ubuntu<br/>
 
 install Docker<br/>
 `sudo apt install docker-ce -y`
+<br/>
+
+
 
 
 
@@ -40,6 +45,10 @@ add username to Docker group<br/>
 
 apply gorup memebership<br/>
 `su - ${USER}`
+<br/>
+
+
+
 
 
 
