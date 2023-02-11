@@ -176,3 +176,24 @@ WORKDIR /var/www
 USER $user
 
 ```
+
+
+<br/>
+<br/>
+<br/>
+
+configure PHP, NGINX and MYSQL<br/>
+
+### PHP<br/>
+`mkdir ~/laravel-app/php`
+
+create local.ini file<br/>
+`nano ~/laravel-app/php/local.ini`
+
+Add below<br/>
+```
+upload_max_filesize=40M
+post_max_size=40M
+```
+
+### NGINX<br/>
