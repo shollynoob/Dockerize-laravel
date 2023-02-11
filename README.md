@@ -70,8 +70,7 @@ Move into the laravel-app directory<br/>
 ### creating Docker-compose<br/>
 `nano ~/laravel-app/docker-compose.yml`
 
-	```
-{
+```
 version: '3'
 services:
   
@@ -132,5 +131,4 @@ services:
 volumes:
   dbdata:
     driver: local
-    }
 ```
