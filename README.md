@@ -280,7 +280,7 @@ Run composer install to install the application dependencies<br/>
 Encrypt session and data using <br/>
 `docker-compose exec app php artisan key:generate`
 
-
-VM is is `20.106.74.42`
+<br/>
+VM IP is `20.106.74.42`
 
 ![image](https://user-images.githubusercontent.com/5302985/218298407-5852ac82-b972-4e24-a7d6-1854a9381490.png)
