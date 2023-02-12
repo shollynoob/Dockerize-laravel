@@ -1,11 +1,11 @@
 # Dockerize-laravel
 
-### Create user and add to sudo group
+### Create user and add to sudo group<br/>
 
-`sudo su`
-`adduser olusola`
-`usermod -aG sudo olusola`
-`su olusola`
+`sudo su`<br/>
+`adduser olusola`<br/>
+`usermod -aG sudo olusola`<br/>
+`su olusola`<br/>
 <br/>
 <br/>
 <br/>
@@ -66,6 +66,9 @@ Move into the laravel-app directory<br/>
 <br/>
 <br/>
 <br/>
+
+Determine the user UID to be used in the docker compose<br/>
+`cat /etc/passwd`
 
 ### creating Docker-compose<br/>
 `nano ~/laravel-app/docker-compose.yml`
