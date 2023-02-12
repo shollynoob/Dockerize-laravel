@@ -267,6 +267,6 @@ DB_PASSWORD=*************
 <br/>
 <br/>
 <br/>
-<br/>
 Run below to build<br/>
 `docker-compose build app`
+`docker-compose up -d`
