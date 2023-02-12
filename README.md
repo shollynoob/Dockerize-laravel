@@ -53,7 +53,7 @@ set permission for docker compose<br/>
 <br/>
 <br/>
 
-### Close laravel repo<br/>
+### Clone laravel repo<br/>
 `cd ~`
 `git clone https://github.com/laravel/laravel.git laravel-app`
 
@@ -93,7 +93,8 @@ services:
     volumes:
       - ./:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
-  
+    networks:
+      - olusola-network
 
   #Setup Nginx Service
   webserver:
@@ -108,7 +109,8 @@ services:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
       - ./nginx-logs:/var/log/nginx
-  
+    networks:
+      - olusola-network
 
   #Setup MySQL Service
   db:
@@ -126,8 +128,14 @@ services:
     volumes:
       - dbdata:/var/lib/mysql/
       - ./mysql/my.cnf:/etc/mysql/my.cnf
-   
-#Define Volumes
+    networks:
+      - olusola-network
+
+#Docker Networks
+networks:
+  olusola-network:
+    driver: bridge
+#Volumes
 volumes:
   dbdata:
     driver: local
@@ -227,3 +235,38 @@ server {
     }
 }
 ```
+#### MYSQL<br/>
+create the mysql directory<br/>
+`mkdir ~/laravel-app/mysql`
+
+make the my.cnf file<br/>
+`nano ~/laravel-app/mysql/my.cnf`
+
+add below in my.cnf<br/>
+```
+[mysqld]
+general_log = 1
+general_log_file = /var/lib/mysql/general.log
+```
+
+Making a copy of the.env.example<br/>
+`cp .env.example .env`
+
+Edit .env<br/>
+`nano .env`
+
+Updating below on .env<br/>
+```
+DB_CONNECTION=mysql
+DB_HOST=*******
+DB_PORT=************
+DB_DATABASE=*************
+DB_USERNAME=*************
+DB_PASSWORD=*************
+``` 
+<br/>
+<br/>
+<br/>
+<br/>
+Run below to build<br/>
+`docker-compose build app`
