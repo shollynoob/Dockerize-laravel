@@ -79,7 +79,7 @@ services:
     build:
       args:
         user: olusola
-        uid: 1000
+        uid: 1001
       context: .
       dockerfile: Dockerfile
     image: olusola/php
