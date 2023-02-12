@@ -268,5 +268,11 @@ DB_PASSWORD=*************
 <br/>
 <br/>
 Run below to build<br/>
-`docker-compose build app`
-`docker-compose up -d`
+`docker-compose build app` <br/>
+`docker-compose up -d`<br/>
+
+Run composer install to install the application dependencies<br/>
+`docker-compose exec app composer install` <br/>
+
+Encrypt session and data using <br/>
+`docker-compose exec app php artisan key:generate`
